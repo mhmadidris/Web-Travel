@@ -1,0 +1,341 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    width: 100%;
+    background-color: rgb(231, 230, 230);
+}
+
+
+/* start scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: lightgrey;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(71, 69, 69);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0);
+}
+
+
+/* end scrollbar */
+
+.container-background {
+    background-color: rgb(245, 245, 245);
+}
+
+.container {
+    padding: 50px 0;
+}
+
+.foto-utama {
+    margin-bottom: 25px;
+}
+
+.form-bawah,
+.foto-header {
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    position: relative;
+    background-color: white;
+    width: 100%;
+    height: auto;
+    border-radius: 7.5px;
+    padding: 25px;
+    margin: 25px 0;
+}
+
+.foto-header-atas {
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foto-header-atas .canvas-back {
+    position: relative;
+    display: inline-block;
+}
+
+.foto-header-atas .canvas-back h6 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.canvas-back canvas {
+    max-width: 300px;
+    height: 275px;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+}
+
+.canvas-back .orangeback {
+    background-color: transparent;
+}
+
+.foto-header .foto-preview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    min-height: 35vh;
+    background-color: white;
+    margin: 7.5px 0;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    position: relative;
+}
+
+.foto-header .foto-preview #text-back2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.foto-header .foto-preview img {
+    border: 1px solid lightgrey;
+    border-radius: 5px;
+    margin: 7.5px;
+}
+
+.form-container {
+    margin: 15px 0;
+    display: flex;
+    flex-direction: column;
+}
+
+.form-container .judul,
+.form-container .biaya {
+    padding: 5px 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.form-biaya {
+    position: relative;
+    border: 1px solid gray;
+    border-radius: 5px;
+}
+
+.form-container .biaya {
+    width: 90%;
+    outline: none;
+    border: none;
+}
+
+.form-container button {
+    margin: 10px 0;
+    background-color: transparent;
+    color: black;
+    width: 10vw;
+    font-weight: 500;
+    opacity: 70%;
+    border: 1px solid gray;
+    box-shadow: none;
+}
+
+.form-container button .fa-plus {
+    margin: 0 5px;
+    font-size: 16px;
+}
+
+.form-container button:focus,
+.form-container button:hover,
+.form-container button:active,
+.form-container button:link,
+.form-container button::after,
+.form-container button::before,
+.form-container button:visited {
+    background-color: transparent;
+    box-shadow: none;
+    color: black;
+    border: 1px solid gray;
+}
+
+.card-body .lok-input {
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.card-body .lok-input textarea {
+    width: 50vw;
+    height: 40vh;
+    margin-right: 5px;
+}
+
+.card-body .lok-input img {
+    width: 40vw;
+    margin-left: 5px;
+    border-radius: 5px;
+    height: 40vh;
+}
+
+.tes {
+    padding: 5px 10px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 10%;
+    height: 100%;
+    background-color: rgb(141, 141, 141);
+    text-align: center;
+    font-weight: 700;
+    color: white;
+}
+
+.form-container select {
+    width: 100%;
+    height: 35px;
+    padding: 5px 10px;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.form-container textarea {
+    padding: 5px 10px;
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.form-button {
+    float: right;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.form-button .button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(255, 68, 0);
+    margin: 0 7.5px;
+    width: 12.5vw;
+    height: 5vh;
+    border-radius: 5px;
+    color: white;
+    font-weight: 600;
+    font-family: Nunito Sans;
+    border: none;
+}
+
+.form-button .cancel {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(177, 177, 177, 0.473);
+    margin: 0 7.5px;
+    width: 12.5vw;
+    height: 5vh;
+    border-radius: 5px;
+    color: rgb(83, 83, 83);
+    font-family: Nunito Sans;
+    font-weight: 600;
+}
+
+.desc-text {
+    height: 35vh;
+}
+
+.inc3 .ck-editor__editable {
+    height: 50vh;
+    width: 100%;
+}
+
+.inc1 .ck-editor__editable,
+.inc2 .ck-editor__editable {
+    width: 35vw;
+    height: 50vh;
+}
+
+.red {
+    color: red;
+}
+
+h5 {
+    font-family: Nunito Sans;
+}
+
+
+/* .form-container p {
+    font-family: Open Sans;
+    font-size: 14px;
+    font-weight: lighter;
+} */
+
+.row-2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.form-group,
+.form-groupa {
+    margin: 5px 0;
+}
+
+.canvas-text {
+    padding: 25px;
+    width: 400px;
+    height: 275px;
+    font-family: Open Sans;
+    font-size: 14px;
+    opacity: 70%;
+}
+
+.ui-widget-content .ui-icon {
+    background-image: url("../img/ui-icons_888888_256x240.png") !important;
+}
+
+.ui-widget-header .ui-icon {
+    background-image: url("../img/ui-icons_888888_256x240.png") !important;
+}
+
+.input-group-column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.input-group .tombol a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 13vw;
+    height: 40vh;
+    margin: 0 12.5px;
+}
+
+.input-group-column input {
+    width: 65vw;
+    margin-bottom: 15px;
+}
+
+.input-group-column .ck-editor__editable {
+    width: 65vw;
+    height: 25vh;
+}

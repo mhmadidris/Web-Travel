@@ -1,0 +1,255 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+/* start scrollbar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: lightgrey;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(71, 69, 69);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0);
+}
+
+
+/* end scrollbar */
+
+html,
+body {
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+}
+
+.overlay-form {
+    background-color: rgb(110, 108, 108);
+}
+
+#myVideo {
+    position: fixed;
+    z-index: -1;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    -webkit-filter: brightness(75%);
+}
+
+.foto {
+    margin: 0% 15% 0% 0%;
+}
+
+.container-login {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.login-content {
+    background-color: white;
+    width: 100%;
+    height: auto;
+    padding: 25px;
+    border-radius: 5px;
+    box-shadow: rgba(17, 17, 26, 0.05) 0px 1px 0px, rgba(17, 17, 26, 0.1) 0px 0px 8px;
+}
+
+form {
+    width: 100%;
+}
+
+.desc-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 0px 20px 0px;
+}
+
+.desc-nav h5 {
+    text-decoration: none;
+    font-size: 16px;
+}
+
+label h4 {
+    margin: 10px 0px 5px 0px;
+    font-size: 14px;
+    color: rgb(53, 53, 53);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+.input-masuk {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding: 5px 10px;
+    width: 250px;
+    height: 25px;
+    border-radius: 5px;
+    border: 1px solid gray;
+    font-size: 14px;
+}
+
+.input-masuk:focus~label,
+.input-masuk:valid~label {
+    top: -20px;
+    left: 0;
+    font-size: 12px;
+}
+
+.flex-bawah {
+    margin: 5px 0px 15px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.flex-bawah a {
+    text-decoration: none;
+}
+
+.tombol-div {
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.tombol-div .button {
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(25, 109, 158);
+    cursor: pointer;
+    color: black;
+    font-weight: bolder;
+    font-size: 14px;
+    font-style: normal;
+}
+
+.tombol-div .button:hover {
+    background-color: rgb(31, 100, 143);
+}
+
+.btnn {
+    margin: 5px 0px;
+    width: 200px;
+    height: 35px;
+    border-radius: 10px;
+    border: none;
+    background-color: rgb(218, 59, 53);
+    cursor: pointer;
+    color: black;
+    font-weight: bolder;
+    font-size: 14px;
+    font-style: normal;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.btnn:hover {
+    background-color: rgb(211, 45, 39);
+}
+
+.fa-google {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0px 5px;
+}
+
+.pembatas {
+    width: 100px;
+    border: 1px solid black;
+    opacity: 0.2;
+    margin: 0px 5px;
+}
+
+.pembatas-or {
+    margin: 7.5px 0px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#div2 {
+    display: none;
+}
+
+.tombol {
+    cursor: pointer;
+}
+
+.aktif,
+.tombol:hover {
+    font-weight: bolder;
+    color: #0cbaba;
+    font-size: 22px;
+    transition: all 0.7s;
+}
+
+footer {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    position: absolute;
+    bottom: 0px;
+    background-color: rgba(184, 184, 184, 0.384);
+    height: auto;
+    width: 100%;
+}
+
+.footer-container {
+    padding: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.flex-row {
+    display: flex;
+    flex-direction: row;
+    margin: 0px 5px;
+}
+
+.flex-row a {
+    color: azure;
+    margin: 0px 5px;
+    text-decoration: none;
+}
+
+@media (min-aspect-ratio: 16/9) {
+    #myVideo {
+        width: 100%;
+        height: auto;
+    }
+}
+
+@media (max-aspect-ratio: 16/9) {
+    #myVideo {
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media (max-width: 767px) {
+    #myVideo {
+        width: auto;
+        height: 100%;
+    }
+}

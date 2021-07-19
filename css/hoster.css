@@ -1,0 +1,280 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: "Poppins", sans-serif;
+}
+
+body {
+    background-image: url("../img/hoster-bg.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: lightgrey;
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgb(71, 69, 69);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgb(0, 0, 0);
+}
+
+
+/* end scrollbar */
+
+
+/* start navbar */
+
+.back-button {
+    padding: 12.5px 50px;
+}
+
+.back-container {
+    background-color: white;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.137) 0px 5px 15px;
+}
+
+.back-container:hover {
+    background-color: lightgray;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    transition: all 0.5s ease-in-out;
+}
+
+.back-button img {
+    width: 25px;
+    height: 25px;
+}
+
+::selection {
+    color: #fff;
+    background: yellow;
+}
+
+.container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-form {
+    width: 330px;
+    background-image: url("../img/bg-blur.jpg");
+    background-size: cover;
+    text-align: center;
+    border-radius: 10px;
+    padding: 0px 25px 0px 25px;
+    margin: 5px;
+    filter: blur(0.1px);
+    -webkit-filter: blur(0.1px);
+}
+
+::placeholder {
+    color: white;
+}
+
+.overlay {}
+
+.container-form .form-outer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.container-form .form-outer form {
+    display: flex;
+    width: 400%;
+}
+
+.form-outer form .page {
+    min-width: 25%;
+    min-height: 50vh;
+    transition: margin-left 0.5s ease-in-out;
+}
+
+.form-outer form .page .title {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    color: white;
+}
+
+.form-outer form .page .field {
+    width: 330px;
+    height: 35px;
+    margin: 35px 0;
+    display: flex;
+    position: relative;
+}
+
+form .page .field .label {
+    position: absolute;
+    top: -20px;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
+form .page .field input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    border-bottom: 2px solid white;
+    background-color: transparent;
+    font-size: 14px;
+    color: white;
+}
+
+form .page .field select {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+form .page .field button {
+    width: 100%;
+    height: calc(100% + 5px);
+    border: 2px solid white;
+    background: transparent;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: 0.5s ease;
+}
+
+form .page .field button:hover {
+    border: 2px solid black;
+    background: #000;
+}
+
+form .page .field .tombol {
+    float: right;
+}
+
+form .page .btns button.prev {
+    margin-right: 3px;
+    font-size: 17px;
+}
+
+form .page .btns button.next {
+    margin-left: 3px;
+}
+
+.container-form .progress-bar {
+    display: flex;
+    margin: 15px 0;
+    user-select: none;
+}
+
+.container-form .progress-bar .step {
+    text-align: center;
+    width: 100%;
+    position: relative;
+    display: none;
+}
+
+.container-form .progress-bar .step p {
+    font-weight: 500;
+    font-size: 18px;
+    color: white;
+    margin-bottom: 5px;
+}
+
+.progress-bar .step .bullet {
+    height: 25px;
+    width: 25px;
+    border: 2px solid white;
+    display: inline-block;
+    border-radius: 50%;
+    position: relative;
+    transition: 0.2s;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 25px;
+}
+
+.progress-bar .step .bullet.active {
+    border-color: yellow;
+    background: yellow;
+}
+
+.progress-bar .step .bullet span {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.progress-bar .step .bullet.active span {
+    display: none;
+}
+
+.progress-bar .step .bullet:before,
+.progress-bar .step .bullet:after {
+    position: absolute;
+    content: "";
+    bottom: 11px;
+    right: -80px;
+    height: 3px;
+    width: 75px;
+    background: #262626;
+}
+
+.progress-bar .step .bullet.active:after {
+    background: yellow;
+    transform: scaleX(0);
+    transform-origin: left;
+    animation: animate 0.3s linear forwards;
+}
+
+@keyframes animate {
+    100% {
+        transform: scaleX(1);
+    }
+}
+
+.progress-bar .step:last-child .bullet:before,
+.progress-bar .step:last-child .bullet:after {
+    display: none;
+}
+
+.progress-bar .step p.active {
+    color: yellow;
+    transition: 0.2s linear;
+}
+
+.progress-bar .step .check {
+    position: absolute;
+    left: 50%;
+    top: 70%;
+    font-size: 15px;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.progress-bar .step .check.active {
+    display: block;
+    color: #fff;
+}
